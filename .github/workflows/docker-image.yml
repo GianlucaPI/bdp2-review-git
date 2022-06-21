@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build /home/ubuntu/review/bdp2-review-git/docker --file Dockerfile --tag gianlucapiccolo21/bdp2-review-docker
+      run: docker build . -f docker/Dockerfile --tag gianlucapiccolo21/bdp2-review-docker
     - name: Push the image to DockerHub
       run: docker login -u gianlucapiccolo21 -p ${{ secrets.DOCKER_TOKEN }} && docker push gianlucapiccolo21/bdp2-review-docker
