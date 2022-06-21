@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . -f docker/Dockerfile --tag gianlucapiccolo21/bdp2-review-docker
     - name: Push the image to DockerHub
-      run: docker login -u gianlucapiccolo21 -p ${{ secrets.DOCKER_TOKEN }} && docker push gianlucapiccolo21/bdp2-review-docker
+      run: docker login -u gianlucapiccolo21 -p 431300c4-e8d6-43b4-a423-09a0f2e12200 && docker push gianlucapiccolo21/bdp2-review-docker
